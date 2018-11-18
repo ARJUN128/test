@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+html {
+	height: 100%;
+   
+}
+
+body {
+	font-family: "Open Sans", Helvetica, Arial;
+	font-weight: 100;
+	background-color: #F9FAFD;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F9FAFD), to(#FDFDFE));
+	background: -webkit-linear-gradient(top, #F9FAFD, #FDFDFE);
+	background: -moz-linear-gradient(top, #F9FAFD, #FDFDFE);
+	background: -ms-linear-gradient(top, #F9FAFD, #FDFDFE);
+	background: -o-linear-gradient(top, #F9FAFD, #FDFDFE);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	margin: 0;
+}
+
+.container {
+	border: 1px solid #DEE2E9;
+	background: #FFF;
+	width: 800px;
+
+	text-align: center;
+	padding: 60px 0px 80px 0px;
+	margin: 50px auto 30px auto;
+}
+
+.container .container {
+	border: none	;
+	background: #FFF;
+	width: initial;
+}
+
+h1 {
+	color: #333333;
+	font-weight: 100;
+	margin: 0;
+    margin-bottom: 30px;
+}
+
+div.error {
+	padding: 60px 40px 80px 40px;
+	box-sizing: border-box;
+}
+
+div.error h1 {
+	font-size: 3.5em !important;
+	color: #AAAAAA;
+}
+
+div.error h3 {
+	margin-top: 40px;
+	font-size: 1.20em;
+	font-weight: 100;
+	color: #666666;
+}
+
+h3.subtitle {
+	color: #999999;
+	font-weight: 100;
+	font-size: 17px;
+	margin: 0;
+}
+
+h2 {
+	color: #333333;
+	font-weight: 100;
+	margin: 0;
+	font-size: 22px;
+  
+}
+
+p.footnote {
+      
+        color: #6ED33F;
+        font-weight: 100;
+        font-size: 9px;
+        margin: auto;
+	width: 240px;
+/*    position: absolute;*/
+	display: inline-block;
+/*	top: 12px;*/
+/*	left: 10px;*/
+    
+}
+
+input, button, a.btn-submit {
+	font-family: "Open Sans", Helvetica, Arial;
+	font-size: 17px;
+	font-weight: 100;
+}
+
+input#phone {
+	border: 1px solid #CCC;
+	text-align:center;
+	width: 240px;
+	height: 40px;
+	margin: 15px auto 5px auto;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.two{
+padding: 50px;
+}
+
+.btn-submit {
+	position: relative;
+	display: block;
+	border:0px;
+	background: #6ED33F;
+	width: 240px;
+	height: 40px;
+	color: #FFF;
+	text-decoration: none;
+	margin: auto;
+	padding-left: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	outline: none;
+}
+
+/*.flex{*/
+/*    display: flex;*/
+    
+/*}*/
+.avatar{
+     border-radius: 50%;
+    border: solid lightgreen 10px;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    margin:40px;
+
+}
+
+.btn-submit:hover {
+	background: darkgreen;
+}
+
+.btn-submit:disabled {
+	cursor: pointer;
+}
+
+form {
+	margin: 0;
+}
+
+.form-item {
+	margin-top: 50px;
+}
+
+.btn-submit-icon {
+	position: absolute;
+	display: inline-block;
+	top: 12px;
+	left: 10px;
+}
+
+.error-feedback {
+	display: block;
+	width: 100%;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #AA0000;
+}
+
+#check {
+	display: none;
+}
+
+
+.logo{
+    clear: both;
+    height: 30px;
+    width: 250px;
+}
+.logodiv{
+    clear: both
+    
+}
+
+@media (max-width: 801px) {
+   
+.form-item {
+	margin-top: 0px;
+}
+	body {
+		background: none;
+        clear: both;
+	}
+    .avatar{
+        float: none;
+        text-align: center;
+    }
+    .two{
+        padding: 0;
+        clear: both;
+    }
+    .logo{
+        margin-top: 20px;
+    }
+	.container {
+        clear: both;
+		border: none;
+		width: 100%;
+		padding: 80px 0px 0px px;
+		margin: 0px;
+	}
+
+	h1 {
+		font-size: 25px;
+	}
+
+	h3.subtitle {
+		font-size: 15px;
+	}
+
+	h2 {
+		font-size: 16px;
+        
+	}
+}

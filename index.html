@@ -1,0 +1,102 @@
+<html class="gr__652n_app_link">
+    
+    <head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="alternate" href="ios-app://1286743359/org.smart-guide.smartguide.T00007/open?link_click_id=500938543729240924">
+		<link rel="alternate" href="android-app://org.smart_guide.smartguide.T_00007/org.smart-guide.smartguide.T00007/open?link_click_id=500938543729240924">
+			<meta property="al:ios:url" content="org.smart-guide.smartguide.T00007://open?link_click_id=500938543729240924">
+			<meta name="twitter:app:url:iphone" content="org.smart-guide.smartguide.T00007://open?link_click_id=500938543729240924">
+			<meta property="al:ios:app_store_id" content="1286743359">
+			<meta name="twitter:app:id:iphone" content="1286743359">
+			<meta property="al:ios:app_name" content="SmartGuide Core App">
+			<meta name="twitter:app:name:iphone" content="SmartGuide Core App">
+			<meta property="al:android:url" content="org.smart-guide.smartguide.T00007://open?link_click_id=500938543729240924">
+			<meta name="twitter:app:url:googleplay" content="org.smart-guide.smartguide.T00007://open?link_click_id=500938543729240924">
+			<meta property="al:android:package" content="org.smart_guide.smartguide.T_00007">
+			<meta name="twitter:app:id:googleplay" content="org.smart_guide.smartguide.T_00007">
+			<meta property="al:android:app_name" content="SmartGuide Core App">
+			<meta name="twitter:app:name:googleplay" content="SmartGuide Core App">
+
+					<meta name="twitter:card" content="summary_large_image">
+			<meta property="og:image" content="https://cdn.branch.io/branch-assets/1535635750657-og_image.png">
+				<meta name="twitter:image:src" content="https://cdn.branch.io/branch-assets/1535635750657-og_image.png">
+			<meta property="og:title" content="SmartGuide">
+				<meta name="twitter:title" content="SmartGuide">
+			<meta property="og:description" content="Private guide in your phone">
+				<meta name="twitter:description" content="Private guide in your phone">
+			<meta name="twitter:app:country" content="US">
+	</head>
+	<body data-gr-c-s-loaded="true">
+		<div class="container">
+            <h1>Hi traveller! Do you want to download the app</h1>
+            <div class="flex">
+			<div class="one">
+            <img class="avatar" src="avatar.png">
+			</div>
+            <div class="two">
+			<form name="form" action="/mUSCoGgsXP?__branch_flow_type=tmta&amp;__branch_flow_id=592698852681457125" method="POST">
+				<div class="form-item">
+					<label for="phone"><h2>Phone number:</h2></label>
+					<input type="text" name="phone" id="phone" placeholder="+1 (123) 123-1234" class="text">
+					<button type="submit" class="btn-submit">
+						
+						<span class="btn-submit-label">Send me the app</span>
+					</button>
+					<label class="error-feedback"></label>
+                                        <p class="footnote">By providing your phone number, you agree to receive a one-time automated text message with a link to get the app. Standard messaging rates may apply.</p>
+				</div>
+                </div>
+                <div class ='logodiv'>
+                <img class="logo" src="official%20logo%20black%20title%20right.png">
+                </div>
+                
+			</form>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				document.querySelector('form').onsubmit = function() {
+					var request = new XMLHttpRequest();
+					request.open('POST', this.action, true);
+					request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+					request.setRequestHeader("Accept", "application/json");
+
+					document.querySelector('label.error-feedback').innerHTML = '';
+					document.querySelector('span.btn-submit-label').innerHTML = 'Sending SMS...';
+
+					document.querySelector('.btn-submit').disabled = true;
+					document.getElementById('phone').disabled = true;
+
+					function error(message) {
+						document.querySelector('label.error-feedback').innerHTML = message;
+						document.querySelector('span.btn-submit-label').innerHTML = 'Send me the app';
+						document.querySelector('.btn-submit').disabled = false;
+						document.getElementById('phone').disabled = false;
+					}
+					function success() {
+						document.querySelector('span.btn-submit-label').innerHTML = 'SMS Sent!';
+						document.querySelector('.btn-submit').style.background = '#1fb955';
+						document.getElementById('plane').style.display = 'none';
+						document.getElementById('check').style.display = 'block'
+					}
+					request.onload = function() {
+						var data = JSON.parse(this.response);
+						if (this.status >= 200 && this.status < 400) {
+							success();
+						}
+						else {
+							error(data.message);
+						}
+					};
+					request.onerror = function() {
+						error('Could not complete the request.');
+					};
+
+					request.send('phone=' + encodeURIComponent(document.querySelector('input#phone').value));
+					return false;
+				};
+			};
+		</script>
+		
+	
+
+</body></html>
